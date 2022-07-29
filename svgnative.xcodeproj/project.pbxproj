@@ -11,12 +11,12 @@
 		321F42C42893DA0500011DEA /* SVGDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 321F422B2893DA0500011DEA /* SVGDocument.h */; };
 		321F42C52893DA0500011DEA /* Rect.h in Headers */ = {isa = PBXBuildFile; fileRef = 321F422C2893DA0500011DEA /* Rect.h */; };
 		321F42C62893DA0500011DEA /* SVGRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 321F422D2893DA0500011DEA /* SVGRenderer.h */; };
-		321F42C72893DA0500011DEA /* SVGNativeCWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 321F422E2893DA0500011DEA /* SVGNativeCWrapper.h */; };
+		321F42C72893DA0500011DEA /* svgnativeCWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 321F422E2893DA0500011DEA /* svgnativeCWrapper.h */; };
 		321F42CA2893DA0500011DEA /* CGSVGRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 321F42352893DA0500011DEA /* CGSVGRenderer.h */; };
 		321F42F12893DA0500011DEA /* CSSColorKeywords.h in Headers */ = {isa = PBXBuildFile; fileRef = 321F42642893DA0500011DEA /* CSSColorKeywords.h */; };
 		321F42F22893DA0500011DEA /* SVGDocumentImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = 321F42652893DA0500011DEA /* SVGDocumentImpl.h */; };
 		321F42F42893DA0500011DEA /* SVGParserArcToCurve.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 321F42682893DA0500011DEA /* SVGParserArcToCurve.cpp */; };
-		321F42F52893DA0500011DEA /* SVGNativeCWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 321F42692893DA0500011DEA /* SVGNativeCWrapper.cpp */; };
+		321F42F52893DA0500011DEA /* svgnativeCWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 321F42692893DA0500011DEA /* svgnativeCWrapper.cpp */; };
 		321F42F62893DA0500011DEA /* XMLParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 321F426B2893DA0500011DEA /* XMLParser.h */; };
 		321F42F72893DA0500011DEA /* LibXMLParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 321F426C2893DA0500011DEA /* LibXMLParser.cpp */; };
 		321F42FA2893DA0500011DEA /* Constants.h in Headers */ = {isa = PBXBuildFile; fileRef = 321F426F2893DA0500011DEA /* Constants.h */; };
@@ -1746,12 +1746,12 @@
 		321F422B2893DA0500011DEA /* SVGDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVGDocument.h; sourceTree = "<group>"; };
 		321F422C2893DA0500011DEA /* Rect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rect.h; sourceTree = "<group>"; };
 		321F422D2893DA0500011DEA /* SVGRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVGRenderer.h; sourceTree = "<group>"; };
-		321F422E2893DA0500011DEA /* SVGNativeCWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVGNativeCWrapper.h; sourceTree = "<group>"; };
+		321F422E2893DA0500011DEA /* svgnativeCWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = svgnativeCWrapper.h; sourceTree = "<group>"; };
 		321F42352893DA0500011DEA /* CGSVGRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGSVGRenderer.h; sourceTree = "<group>"; };
 		321F42642893DA0500011DEA /* CSSColorKeywords.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSSColorKeywords.h; sourceTree = "<group>"; };
 		321F42652893DA0500011DEA /* SVGDocumentImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVGDocumentImpl.h; sourceTree = "<group>"; };
 		321F42682893DA0500011DEA /* SVGParserArcToCurve.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SVGParserArcToCurve.cpp; sourceTree = "<group>"; };
-		321F42692893DA0500011DEA /* SVGNativeCWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SVGNativeCWrapper.cpp; sourceTree = "<group>"; };
+		321F42692893DA0500011DEA /* svgnativeCWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = svgnativeCWrapper.cpp; sourceTree = "<group>"; };
 		321F426B2893DA0500011DEA /* XMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLParser.h; sourceTree = "<group>"; };
 		321F426C2893DA0500011DEA /* LibXMLParser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LibXMLParser.cpp; sourceTree = "<group>"; };
 		321F426F2893DA0500011DEA /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
@@ -3475,7 +3475,7 @@
 		321F82802893DE6A00011DEA /* binary.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = binary.hpp; sourceTree = "<group>"; };
 		321F82812893DE6A00011DEA /* compare_pointees.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = compare_pointees.hpp; sourceTree = "<group>"; };
 		321F82822893DE6A00011DEA /* enable_if.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = enable_if.hpp; sourceTree = "<group>"; };
-		32FFC71F2893D8A500C05D39 /* SVGNative.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SVGNative.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		32FFC71F2893D8A500C05D39 /* svgnative.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = svgnative.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -3517,7 +3517,7 @@
 				321F422B2893DA0500011DEA /* SVGDocument.h */,
 				321F422C2893DA0500011DEA /* Rect.h */,
 				321F422D2893DA0500011DEA /* SVGRenderer.h */,
-				321F422E2893DA0500011DEA /* SVGNativeCWrapper.h */,
+				321F422E2893DA0500011DEA /* svgnativeCWrapper.h */,
 				321F422F2893DA0500011DEA /* ports */,
 			);
 			path = svgnative;
@@ -3546,7 +3546,7 @@
 				321F42652893DA0500011DEA /* SVGDocumentImpl.h */,
 				321F42662893DA0500011DEA /* win */,
 				321F42682893DA0500011DEA /* SVGParserArcToCurve.cpp */,
-				321F42692893DA0500011DEA /* SVGNativeCWrapper.cpp */,
+				321F42692893DA0500011DEA /* svgnativeCWrapper.cpp */,
 				321F426A2893DA0500011DEA /* xml */,
 				321F426F2893DA0500011DEA /* Constants.h */,
 				321F42702893DA0500011DEA /* Rect.cpp */,
@@ -6461,7 +6461,7 @@
 		32FFC7202893D8A500C05D39 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				32FFC71F2893D8A500C05D39 /* SVGNative.framework */,
+				32FFC71F2893D8A500C05D39 /* svgnative.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -6627,7 +6627,7 @@
 				321F85E32893DE6B00011DEA /* full_lambda.hpp in Headers */,
 				321F87CA2893DE6B00011DEA /* sparc.h in Headers */,
 				321F88552893DE6B00011DEA /* end.hpp in Headers */,
-				321F42C72893DA0500011DEA /* SVGNativeCWrapper.h in Headers */,
+				321F42C72893DA0500011DEA /* svgnativeCWrapper.h in Headers */,
 				321F87202893DE6B00011DEA /* vector10.hpp in Headers */,
 				321F83242893DE6A00011DEA /* sp_counted_base_gcc_ppc.hpp in Headers */,
 				321F874C2893DE6B00011DEA /* numbered_c.hpp in Headers */,
@@ -8196,9 +8196,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		32FFC71E2893D8A500C05D39 /* SVGNative */ = {
+		32FFC71E2893D8A500C05D39 /* svgnative */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 32FFC7262893D8A500C05D39 /* Build configuration list for PBXNativeTarget "SVGNative" */;
+			buildConfigurationList = 32FFC7262893D8A500C05D39 /* Build configuration list for PBXNativeTarget "svgnative" */;
 			buildPhases = (
 				32FFC71A2893D8A500C05D39 /* Headers */,
 				32FFC71B2893D8A500C05D39 /* Sources */,
@@ -8209,9 +8209,9 @@
 			);
 			dependencies = (
 			);
-			name = SVGNative;
-			productName = SVGNative;
-			productReference = 32FFC71F2893D8A500C05D39 /* SVGNative.framework */;
+			name = svgnative;
+			productName = svgnative;
+			productReference = 32FFC71F2893D8A500C05D39 /* svgnative.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -8228,7 +8228,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 32FFC7192893D8A500C05D39 /* Build configuration list for PBXProject "SVGNative" */;
+			buildConfigurationList = 32FFC7192893D8A500C05D39 /* Build configuration list for PBXProject "svgnative" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -8241,7 +8241,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				32FFC71E2893D8A500C05D39 /* SVGNative */,
+				32FFC71E2893D8A500C05D39 /* svgnative */,
 			);
 		};
 /* End PBXProject section */
@@ -8267,7 +8267,7 @@
 				321F43062893DA0500011DEA /* SVGDocumentImpl.cpp in Sources */,
 				321F43092893DA0500011DEA /* DeprecatedSVGDocumentImpl.cpp in Sources */,
 				321F58C42893DD0800011DEA /* test.cpp in Sources */,
-				321F42F52893DA0500011DEA /* SVGNativeCWrapper.cpp in Sources */,
+				321F42F52893DA0500011DEA /* svgnativeCWrapper.cpp in Sources */,
 				321F43072893DA0500011DEA /* SVGDocument.cpp in Sources */,
 				321F58C32893DD0800011DEA /* base64.cpp in Sources */,
 				321F42FB2893DA0500011DEA /* Rect.cpp in Sources */,
@@ -8424,7 +8424,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.SVGNative;
+				PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.svgnative;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos appletvos appletvsimulator watchos watchsimulator";
@@ -8459,7 +8459,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.SVGNative;
+				PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.svgnative;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos appletvos appletvsimulator watchos watchsimulator";
@@ -8471,7 +8471,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		32FFC7192893D8A500C05D39 /* Build configuration list for PBXProject "SVGNative" */ = {
+		32FFC7192893D8A500C05D39 /* Build configuration list for PBXProject "svgnative" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				32FFC7242893D8A500C05D39 /* Debug */,
@@ -8480,7 +8480,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		32FFC7262893D8A500C05D39 /* Build configuration list for PBXNativeTarget "SVGNative" */ = {
+		32FFC7262893D8A500C05D39 /* Build configuration list for PBXNativeTarget "svgnative" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				32FFC7272893D8A500C05D39 /* Debug */,
