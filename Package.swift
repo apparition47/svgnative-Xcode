@@ -12,7 +12,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "svgnative",
-            targets: ["svgnative"]),
+            targets: ["svgnative", "boost", "cpp-base64"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -23,18 +23,46 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
             name: "svgnative",
-            dependencies: [],
+            dependencies: ["boost", "cpp-base64"],
             path: "svg-native-viewer",
-            exclude: ["svgnative/src/xml/ExpatXMLParser.cpp",
+            exclude: ["svgnative/example", "svgnative/test", "svgnative/tests",
+                      "svgnative/src/win",
+                      "svgnative/src/xml/ExpatXMLParser.cpp",
                       "svgnative/src/xml/RapidXMLParser.cpp",
                       "svgnative/src/ports/cairo",
                       "svgnative/src/ports/d2d",
                       "svgnative/src/ports/gdiplus",
                       "svgnative/src/ports/skia",
-                      "svgnative/src/ports/string"],
-            sources: ["svgnative/src", "third_party/boost_variant_property_tree", "third_party/cpp-base64"],
+                      "svgnative/src/ports/string",
+                      "svgnative/include/svgnative/ports/cairo",
+                      "svgnative/include/svgnative/ports/d2d",
+                      "svgnative/include/svgnative/ports/gdiplus",
+                      "svgnative/include/svgnative/ports/skia",
+                      "svgnative/include/svgnative/ports/string"],
+            sources: ["svgnative/src"],
+            resources: [],
             publicHeadersPath: "svgnative/include",
-            cSettings: [.define("USE_CG"), .headerSearchPath("svgnative/src"), .headerSearchPath("third_party/boost_variant_property_tree"), .headerSearchPath("third_party/cpp-base64")]
+            cSettings: [.define("USE_CG", to: "1"),
+                        .define("BOOST_VARIANT_DETAIL_NO_SUBSTITUTE", to: "1"),
+                        .headerSearchPath("svgnative/src")]
+        ),
+        .target(
+          name: "boost",
+          dependencies: [],
+          path: "svg-native-viewer",
+          exclude: ["svgnative/example", "svgnative/test", "svgnative/tests"],
+          sources: ["third_party/boost_variant_property_tree", "third_party/dummy.cpp"],
+          publicHeadersPath: "third_party/boost_variant_property_tree",
+          cSettings: [.define("BOOST_VARIANT_DETAIL_NO_SUBSTITUTE", to: "1")]
+        ),
+        .target(
+          name: "cpp-base64",
+          dependencies: [],
+          path: "svg-native-viewer",
+          exclude: ["svgnative/example", "svgnative/test", "svgnative/tests"],
+          sources: ["third_party/cpp-base64/base64.h", "third_party/cpp-base64/base64.cpp"],
+          resources: [],
+          publicHeadersPath: "third_party/cpp-base64"
         )
     ],
     cLanguageStandard: .gnu11,
