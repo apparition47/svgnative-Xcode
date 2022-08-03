@@ -58,15 +58,13 @@ let package = Package(
 
 Use svgnative as you would normally, this is just a repo that adds an Xcode proj.
 
-For Swift Package Manager user, it's recommended to use the modular import instead of C headers.
-
-+ Objective-C
++ Objective-C++
 
 ```objective-c
-@import svgnative;
-// or if you don't use module
 #import <svgnative/SVGRenderer.h>
 ```
+
+Note C++ module is C++20 standard and disabled for clang by default currently. Use header include instead.
 
 + Swift
 
@@ -74,11 +72,9 @@ For Swift Package Manager user, it's recommended to use the modular import inste
 import svgnative
 ```
 
-## For C++ user
+## For C wrapper
 
-The rlottie umbrella header and modulemap does not contains C++ header `SVGRenderer.h`, because Swift/Objective-C can not import C++ interface (Objective-C++ can, but with clang module disabled).
-
-If you need the C++ interface, use the public header search path to `include`, make sure you have disable module as well.
+Use the `svgnative/SVGNativeCWrapper.h` instead of C++ headers.
 
 ## License
 
