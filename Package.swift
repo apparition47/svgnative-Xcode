@@ -1,4 +1,4 @@
-// swift-tools-version: 5.6
+// swift-tools-version:5.1
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -40,7 +40,6 @@ let package = Package(
                       "svgnative/include/svgnative/ports/skia",
                       "svgnative/include/svgnative/ports/string"],
             sources: ["svgnative/src"],
-            resources: [],
             publicHeadersPath: "svgnative/include",
             cSettings: [.define("USE_CG", to: "1"),
                         .define("BOOST_VARIANT_DETAIL_NO_SUBSTITUTE", to: "1"),
@@ -61,7 +60,6 @@ let package = Package(
           path: "svg-native-viewer",
           exclude: ["svgnative/example", "svgnative/test", "svgnative/tests"],
           sources: ["third_party/cpp-base64/base64.h", "third_party/cpp-base64/base64.cpp"],
-          resources: [],
           publicHeadersPath: "third_party/cpp-base64"
         )
     ],
