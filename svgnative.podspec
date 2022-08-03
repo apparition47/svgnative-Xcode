@@ -35,6 +35,7 @@ SVG Native will be a strict subset of SVG 1.1 and SVG 2.0.
   s.source_files = ['svg-native-viewer/svgnative/include/**/*.{h,hpp}',
                     'svg-native-viewer/svgnative/src/**/*.{h,c,cc,cpp,hpp}',
                     'svg-native-viewer/third_party/cpp-base64/base64.{h,cpp}']
+  s.public_header_files = 'svg-native-viewer/svgnative/include/**/*.{h,hpp}'
   s.header_mappings_dir = 'svg-native-viewer/svgnative/include'
   s.exclude_files = ['svg-native-viewer/svgnative/src/xml/ExpatXMLParser.cpp',
                      'svg-native-viewer/svgnative/src/xml/RapidXMLParser.cpp',
