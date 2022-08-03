@@ -22,10 +22,10 @@ SVG Native is an upcoming specification of the SVG WG based on SVG OpenType.
 SVG Native will be a strict subset of SVG 1.1 and SVG 2.0.
                        DESC
 
-  s.homepage         = 'https://github.com/adobe/svg-native-viewer'
+  s.homepage         = 'https://github.com/SDWebImage/svgnative-Xcode'
   s.license          = { :type => 'Apache V2' }
   s.author           = { 'adobe' => 'https://adobe.com' }
-  s.source           = { :git => 'https://github.com/SDWebImage/svg-native-viewer.git', :tag => s.version.to_s, :submodules => true }
+  s.source           = { :git => 'https://github.com/SDWebImage/svgnative-Xcode.git', :tag => s.version.to_s, :submodules => true }
 
   s.ios.deployment_target = '9.0'
   s.osx.deployment_target = '10.11'
