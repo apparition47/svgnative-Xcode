@@ -21,7 +21,10 @@ This repo also including the CocoaPods's spec file to use svg-native.
 
 ## Note
 
-The 0.1.0-beta version use the custom SHA, because the upstream does not have tagged version.
+Because the upstream does not have tagged version. We release version by ourselves.
+
++ 0.1.0-beta: d234cff
++ 0.1.0: e091851
 
 ## Installation
 
