@@ -1928,8 +1928,7 @@
 				325CF16B2899433D00394F49 /* boost_variant_property_tree */,
 				321F51592893DD0700011DEA /* cpp-base64 */,
 			);
-			name = third_party;
-			path = "svg-native-viewer/third_party";
+			path = third_party;
 			sourceTree = "<group>";
 		};
 		321F51592893DD0700011DEA /* cpp-base64 */ = {
