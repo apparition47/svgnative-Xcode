@@ -25,8 +25,7 @@ let package = Package(
             name: "svgnative",
             dependencies: ["boost", "cpp-base64"],
             path: "svg-native-viewer",
-            exclude: ["svgnative/example", "svgnative/test", "svgnative/tests",
-                      "svgnative/src/win",
+            exclude: ["svgnative/src/win",
                       "svgnative/src/xml/ExpatXMLParser.cpp",
                       "svgnative/src/xml/RapidXMLParser.cpp",
                       "svgnative/src/ports/cairo",
@@ -48,19 +47,17 @@ let package = Package(
         .target(
           name: "boost",
           dependencies: [],
-          path: "svg-native-viewer",
-          exclude: ["svgnative/example", "svgnative/test", "svgnative/tests"],
-          sources: ["third_party/boost_variant_property_tree", "third_party/dummy.cpp"],
-          publicHeadersPath: "third_party/boost_variant_property_tree",
+          path: "third_party",
+          sources: ["boost_variant_property_tree", "dummy.cpp"],
+          publicHeadersPath: "boost_variant_property_tree",
           cSettings: [.define("BOOST_VARIANT_DETAIL_NO_SUBSTITUTE", to: "1")]
         ),
         .target(
           name: "cpp-base64",
           dependencies: [],
-          path: "svg-native-viewer",
-          exclude: ["svgnative/example", "svgnative/test", "svgnative/tests"],
-          sources: ["third_party/cpp-base64/base64.h", "third_party/cpp-base64/base64.cpp"],
-          publicHeadersPath: "third_party/cpp-base64"
+          path: "third_party",
+          sources: ["cpp-base64/base64.h", "cpp-base64/base64.cpp"],
+          publicHeadersPath: "cpp-base64"
         )
     ],
     cLanguageStandard: .gnu11,
