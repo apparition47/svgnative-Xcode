@@ -26,7 +26,7 @@ let package = Package(
             dependencies: ["boost", "cpp-base64"],
             path: "svg-native-viewer",
             exclude: ["svgnative/src/win",
-                      "svgnative/src/xml/ExpatXMLParser.cpp",
+                      "svgnative/src/xml/RapidXMLParser.cpp",
                       "svgnative/src/xml/LibXMLParser.cpp",
                       "svgnative/src/ports/cairo",
                       "svgnative/src/ports/d2d",
